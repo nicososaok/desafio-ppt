@@ -1,4 +1,4 @@
-let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],getState(){return this.data},setState(e){for(let t of(this.data=e,this.listeners))t();localStorage.setItem("ppt-history",JSON.stringify(this.data.history))},subscribe(e){this.listeners.push(e)},init(){let e=localStorage.getItem("ppt-history");if(e){let t=this.getState();t.history=JSON.parse(e),this.data=t}},setMove(e){let t=this.getState();t.currentGame.myPlay=e,this.data=t},pushToHistory(){let e=this.getState(),t=e.currentGame.myPlay,a=["piedra","papel","tijera"][Math.floor(3*Math.random())];e.currentGame.computerPlay=a;let n=this.whoWins(t,a);e.history.push({myPlay:t,computerPlay:a,winner:n}),this.setState(e)},whoWins:(e,t)=>e===t?"empate":"tijera"===e&&"papel"===t||"piedra"===e&&"tijera"===t||"papel"===e&&"piedra"===t?"yo":"computadora",getScore(){let e=this.getState(),t=0,a=0;return e.history.forEach(e=>{"yo"===e.winner&&t++,"computadora"===e.winner&&a++}),{yo:t,computadora:a}}};var t={};t=import.meta.resolve("efPYo");class a extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
+let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],getState(){return this.data},setState(e){for(let t of(this.data=e,this.listeners))t();localStorage.setItem("ppt-history",JSON.stringify(this.data.history))},subscribe(e){this.listeners.push(e)},init(){let e=localStorage.getItem("ppt-history");if(e){let t=this.getState();t.history=JSON.parse(e),this.data=t}},setMove(e){let t=this.getState();t.currentGame.myPlay=e,this.data=t},pushToHistory(){let e=this.getState(),t=e.currentGame.myPlay,a=["piedra","papel","tijera"][Math.floor(3*Math.random())];e.currentGame.computerPlay=a;let n=this.whoWins(t,a);e.history.push({myPlay:t,computerPlay:a,winner:n}),this.setState(e)},whoWins:(e,t)=>e===t?"empate":"tijera"===e&&"papel"===t||"piedra"===e&&"tijera"===t||"papel"===e&&"piedra"===t?"yo":"computadora",getScore(){let e=this.getState(),t=0,a=0;return e.history.forEach(e=>{"yo"===e.winner&&t++,"computadora"===e.winner&&a++}),{yo:t,computadora:a}}};var t={};t=import.meta.resolve("Ujjrq");class a extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
       <main class="welcome-screen">
         <img src="${t}" class="welcome-title-img" />
 
@@ -47,7 +47,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
     `,this.appendChild(e),this.querySelector(".start-button")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("welcome-page",a);class n extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
       <section class="instructions-screen">
         <div class="instructions-image-container">
-          <img src="${$50c57511cb787bf6$exports}" class="instructions-img" alt="Instrucciones">
+          <img src="${$0b395168f36e523c$exports}" class="instructions-img" alt="Instrucciones">
         </div>
 
         <button class="start-game-btn btn-principal">\xa1Jugar!</button>
@@ -208,7 +208,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
         width: 150px;
         height: 300px;
       }
-    `,this.appendChild(a),setTimeout(()=>{this.goTo("/results")},2500)}}customElements.define("play-page",i);var o={};o=import.meta.resolve("cSPQ6");var s={};s=import.meta.resolve("3YqhD");var r={};r=import.meta.resolve("fapai");var l={};l=import.meta.resolve("d7lWl");var c={};c=import.meta.resolve("hoDR3");var d={};d=import.meta.resolve("1kW6C");class m extends HTMLElement{connectedCallback(){this.render()}render(){let t=e.getState().currentGame,a=e.whoWins(t.myPlay,t.computerPlay),n=e.getScore(),i="yo"===a,m=i?o:s,p=i?r:l,u=i?c:d;this.innerHTML=`
+    `,this.appendChild(a),setTimeout(()=>{this.goTo("/results")},2500)}}customElements.define("play-page",i);var o={};o=import.meta.resolve("lpCOD");var s={};s=import.meta.resolve("78Fzp");var r={};r=import.meta.resolve("bO0WC");var l={};l=import.meta.resolve("iSRbA");var c={};c=import.meta.resolve("aV8qR");var d={};d=import.meta.resolve("kOwh6");class m extends HTMLElement{connectedCallback(){this.render()}render(){let t=e.getState().currentGame,a=e.whoWins(t.myPlay,t.computerPlay),n=e.getScore(),i="yo"===a,m=i?o:s,p=i?r:l,u=i?c:d;this.innerHTML=`
       <section class="results-screen">
         <div class="result-container">
           <img class="star-base" src="${p}" />
@@ -273,7 +273,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
       .score-info p { margin: 5px 0; }
 
       .return-btn { width: 322px; height: 87px; }
-    `,this.appendChild(h),this.querySelector(".return-btn")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("results-page",m);let p=[{path:/\/welcome/,component:function(e){let t=document.createElement("welcome-page");return t.goTo=e.goTo,t}},{path:/\/instructions/,component:function(e){let t=document.createElement("instructions-page");return t.goTo=e.goTo,t}},{path:/\/play/,component:function(e){let t=document.createElement("play-page");return t.goTo=e.goTo,t}},{path:/\/results/,component:function(e){let t=document.createElement("results-page");return t.goTo=e.goTo,t}}];var u={};u=import.meta.resolve("ewuCh");var h={};h=import.meta.resolve("3l8g3");var g={};g=import.meta.resolve("6agIS");class y extends HTMLElement{connectedCallback(){this.render()}render(){let e=this.getAttribute("jugada")||"piedra",t={piedra:u,papel:h,tijera:g};this.innerHTML=`
+    `,this.appendChild(h),this.querySelector(".return-btn")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("results-page",m);let p=[{path:/\/welcome/,component:function(e){let t=document.createElement("welcome-page");return t.goTo=e.goTo,t}},{path:/\/instructions/,component:function(e){let t=document.createElement("instructions-page");return t.goTo=e.goTo,t}},{path:/\/play/,component:function(e){let t=document.createElement("play-page");return t.goTo=e.goTo,t}},{path:/\/results/,component:function(e){let t=document.createElement("results-page");return t.goTo=e.goTo,t}}];var u={};u=import.meta.resolve("9OT4u");var h={};h=import.meta.resolve("bsbj2");var g={};g=import.meta.resolve("iratE");class y extends HTMLElement{connectedCallback(){this.render()}render(){let e=this.getAttribute("jugada")||"piedra",t={piedra:u,papel:h,tijera:g};this.innerHTML=`
       <div class="hand-container">
         <img src="${t[e]}" class="hand-img" />
       </div>
@@ -296,4 +296,4 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
         filter: none; /* Aseguramos que por defecto no tengan gris */
       }
     `,this.appendChild(a)}}customElements.define("my-jugada",y);let f=document.querySelector("#root");if(e.init(),f){function x(e){history.pushState({},"",e),b(e)}function b(e){console.log("El router recibió la ruta:",e);let t=!1;for(let a of p)if(a.path.test(e)){t=!0;let e=a.component({goTo:x});f.firstChild&&f.firstChild.remove(),f.appendChild(e);break}t||x("/welcome")}"/"===location.pathname||"/desafio-m5-ppt/"===location.pathname?x("/welcome"):b(location.pathname),window.addEventListener("popstate",()=>{b(location.pathname)})}else console.error("No se encontró el elemento #root en el HTML. Revisa tu index.html.");
-//# sourceMappingURL=desafio-ppt.af676698.js.map
+//# sourceMappingURL=desafio-ppt.199f4224.js.map
