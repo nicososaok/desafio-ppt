@@ -1,0 +1,192 @@
+:root {
+  --color-principal: #00E1AE;
+  --color-boton: #006CFC;
+  --color-borde-boton: #001997;
+  --font-main: 'Odibee Sans', cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("./assets/fondo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px 0 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.btn-principal {
+  width: 100%;
+  height: 87px;
+  background-color: var(--color-boton);
+  border: 10px solid var(--color-borde-boton);
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-main);
+  font-size: 45px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn-principal:active {
+  transform: scale(0.95);
+}
+
+.hands-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  bottom: -20px;
+}
+
+my-jugada {
+  width: 25%;
+  max-width: 120px;
+  min-width: 80px;
+}
+
+.play__hands {
+  margin-top: auto;
+}
+
+.hand-selected {
+  transform: translateY(-50px);
+  transition: transform 0.3s ease;
+}
+
+.hand-inactive {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.results-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.star-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.star-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.result-label {
+  position: absolute;
+  font-size: 55px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-circle-bg {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 8;
+}
+
+.timer-circle-path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
+  animation: countdown-animation 3s linear forwards;
+}
+
+@keyframes countdown-animation {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 283;
+  }
+}
+
+.number {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.hand-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+:host {
+  width: 25vw;
+  max-width: 100px;
+  display: inline-block;
+}
+
+@media (min-width: 769px) {
+  :host {
+    width: 15vw;
+    max-width: 150px;
+  }
+}
