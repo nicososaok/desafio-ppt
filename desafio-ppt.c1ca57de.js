@@ -44,10 +44,10 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
       my-jugada {
         width: 80px;
       }
-    `,this.appendChild(e),this.querySelector(".start-button")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("welcome-page",a);class n extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
+    `,this.appendChild(e),this.querySelector(".start-button")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("welcome-page",a);var n={};n=import.meta.resolve("48RSy");class i extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
       <section class="instructions-screen">
         <div class="instructions-image-container">
-          <img src="${$0b395168f36e523c$exports}" class="instructions-img" alt="Instrucciones">
+          <img src="${n}" class="instructions-img" alt="Instrucciones">
         </div>
 
         <button class="start-game-btn btn-principal">\xa1Jugar!</button>
@@ -92,7 +92,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
       my-jugada {
         width: 80px;
       }
-    `,this.appendChild(e),this.querySelector(".start-game-btn")?.addEventListener("click",()=>{this.goTo("/play")})}}customElements.define("instructions-page",n);class i extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
+    `,this.appendChild(e),this.querySelector(".start-game-btn")?.addEventListener("click",()=>{this.goTo("/play")})}}customElements.define("instructions-page",i);class o extends HTMLElement{connectedCallback(){this.render()}render(){this.innerHTML=`
       <section class="play-container">
         <div class="countdown-wrapper">
           <svg class="timer-svg" viewBox="0 0 100 100">
@@ -208,11 +208,11 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
         width: 150px;
         height: 300px;
       }
-    `,this.appendChild(a),setTimeout(()=>{this.goTo("/results")},2500)}}customElements.define("play-page",i);var o={};o=import.meta.resolve("lpCOD");var s={};s=import.meta.resolve("78Fzp");var r={};r=import.meta.resolve("bO0WC");var l={};l=import.meta.resolve("iSRbA");var c={};c=import.meta.resolve("aV8qR");var d={};d=import.meta.resolve("kOwh6");class m extends HTMLElement{connectedCallback(){this.render()}render(){let t=e.getState().currentGame,a=e.whoWins(t.myPlay,t.computerPlay),n=e.getScore(),i="yo"===a,m=i?o:s,p=i?r:l,u=i?c:d;this.innerHTML=`
+    `,this.appendChild(a),setTimeout(()=>{this.goTo("/results")},2500)}}customElements.define("play-page",o);var s={};s=import.meta.resolve("lpCOD");var r={};r=import.meta.resolve("78Fzp");var l={};l=import.meta.resolve("bO0WC");var c={};c=import.meta.resolve("iSRbA");var d={};d=import.meta.resolve("aV8qR");var m={};m=import.meta.resolve("kOwh6");class p extends HTMLElement{connectedCallback(){this.render()}render(){let t=e.getState().currentGame,a=e.whoWins(t.myPlay,t.computerPlay),n=e.getScore(),i="yo"===a,o=i?s:r,p=i?l:c,h=i?d:m;this.innerHTML=`
       <section class="results-screen">
         <div class="result-container">
           <img class="star-base" src="${p}" />
-          <img class="result-text-img" src="${u}" />
+          <img class="result-text-img" src="${h}" />
         </div>
 
         <div class="score-board">
@@ -225,7 +225,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
 
         <button class="return-btn btn-principal">Volver a Jugar</button>
       </section>
-    `;let h=document.createElement("style");h.textContent=`
+    `;let u=document.createElement("style");u.textContent=`
       .results-screen {
         height: 100vh;
         width: 100%;
@@ -233,7 +233,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        background-image: url("${m}");
+        background-image: url("${o}");
         background-size: cover;
         background-position: center;
         position: fixed; /* Asegura que tape el fondo anterior completamente */
@@ -273,7 +273,7 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
       .score-info p { margin: 5px 0; }
 
       .return-btn { width: 322px; height: 87px; }
-    `,this.appendChild(h),this.querySelector(".return-btn")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("results-page",m);let p=[{path:/\/welcome/,component:function(e){let t=document.createElement("welcome-page");return t.goTo=e.goTo,t}},{path:/\/instructions/,component:function(e){let t=document.createElement("instructions-page");return t.goTo=e.goTo,t}},{path:/\/play/,component:function(e){let t=document.createElement("play-page");return t.goTo=e.goTo,t}},{path:/\/results/,component:function(e){let t=document.createElement("results-page");return t.goTo=e.goTo,t}}];var u={};u=import.meta.resolve("9OT4u");var h={};h=import.meta.resolve("bsbj2");var g={};g=import.meta.resolve("iratE");class y extends HTMLElement{connectedCallback(){this.render()}render(){let e=this.getAttribute("jugada")||"piedra",t={piedra:u,papel:h,tijera:g};this.innerHTML=`
+    `,this.appendChild(u),this.querySelector(".return-btn")?.addEventListener("click",()=>{this.goTo("/instructions")})}}customElements.define("results-page",p);let h=[{path:/welcome/,component:function(e){let t=document.createElement("welcome-page");return t.goTo=e.goTo,t}},{path:/instructions/,component:function(e){let t=document.createElement("instructions-page");return t.goTo=e.goTo,t}},{path:/play/,component:function(e){let t=document.createElement("play-page");return t.goTo=e.goTo,t}},{path:/results/,component:function(e){let t=document.createElement("results-page");return t.goTo=e.goTo,t}}];var u={};u=import.meta.resolve("9OT4u");var g={};g=import.meta.resolve("bsbj2");var y={};y=import.meta.resolve("iratE");class f extends HTMLElement{connectedCallback(){this.render()}render(){let e=this.getAttribute("jugada")||"piedra",t={piedra:u,papel:g,tijera:y};this.innerHTML=`
       <div class="hand-container">
         <img src="${t[e]}" class="hand-img" />
       </div>
@@ -295,5 +295,5 @@ let e={data:{currentGame:{computerPlay:"",myPlay:""},history:[]},listeners:[],ge
         display: block;
         filter: none; /* Aseguramos que por defecto no tengan gris */
       }
-    `,this.appendChild(a)}}customElements.define("my-jugada",y);let f=document.querySelector("#root");if(e.init(),f){function x(e){history.pushState({},"",e),b(e)}function b(e){console.log("El router recibió la ruta:",e);let t=!1;for(let a of p)if(a.path.test(e)){t=!0;let e=a.component({goTo:x});f.firstChild&&f.firstChild.remove(),f.appendChild(e);break}t||x("/welcome")}"/"===location.pathname||"/desafio-m5-ppt/"===location.pathname?x("/welcome"):b(location.pathname),window.addEventListener("popstate",()=>{b(location.pathname)})}else console.error("No se encontró el elemento #root en el HTML. Revisa tu index.html.");
-//# sourceMappingURL=desafio-ppt.199f4224.js.map
+    `,this.appendChild(a)}}customElements.define("my-jugada",f);let x=document.querySelector("#root");if(e.init(),x){function w(e){window.location.hash=e}function b(e){console.log("El router recibió la ruta (hash):",e);let t=e.replace("#",""),a=!1;for(let e of h)if(e.path.test(t)){a=!0;let t=e.component({goTo:w});x.firstChild&&x.firstChild.remove(),x.appendChild(t);break}a||"/"!==t&&""!==t||w("/welcome")}window.addEventListener("hashchange",()=>{b(window.location.hash)}),window.location.hash?b(window.location.hash):b("#/welcome")}else console.error("No se encontró el elemento #root en el HTML. Revisa tu index.html.");
+//# sourceMappingURL=desafio-ppt.c1ca57de.js.map
